@@ -1,0 +1,25 @@
+body {
+    background: gray;
+}
+
+h1 {
+    color: bisque;
+    font-weight: bold;
+}
+
+h2 {
+    color: blue;
+    font-style: italic;
+}
+
+h5 {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: right;
+}
+
+.username {
+    color: rgb(120, 211, 241);
+    text-shadow: blueviolet;
+}
