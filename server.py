@@ -5,7 +5,7 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, Gene!' """
 
-@app.route('/home')
+@app.route('/')
 def home_page():
     return render_template('index.html')
 
@@ -13,9 +13,17 @@ def home_page():
 def about():
     return render_template('about.html')
 
-@app.route('/<username>')
-def hello_world(username=None):
-    return render_template('user.html', name=username)
+@app.route('/project.html')
+def projects(username=None):
+    return render_template('project.html')
+
+@app.route('/contact.html')
+def contact(username=None):
+    return render_template('contact.html')
+
+@app.route('/services.html')
+def services(username=None):
+    return render_template('services.html')
 
 
 
