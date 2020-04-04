@@ -9,7 +9,15 @@ def hello_world():
 def home_page():
     return render_template('index.html')
 
-@app.route('/about.html')
+# streamline page addressing and rendering use variable in url string to hold page name
+
+@app.route('/<string:page_name>')
+def html_render_page(page_name):
+    return render_template(page_name)
+
+
+#removed below rev 1.0 4/4/20
+""" @app.route('/about.html')
 def about():
     return render_template('about.html')
 
@@ -23,7 +31,7 @@ def contact(username=None):
 
 @app.route('/services.html')
 def services(username=None):
-    return render_template('services.html')
+    return render_template('services.html') """
 
 
 
